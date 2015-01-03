@@ -212,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 190);
+            this.ClientSize = new System.Drawing.Size(356, 191);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnEquals);
@@ -230,6 +230,8 @@
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn9);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

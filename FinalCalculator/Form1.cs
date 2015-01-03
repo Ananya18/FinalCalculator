@@ -23,5 +23,24 @@ namespace FinalCalculator
 
             txtResult.Text = txtResult.Text + input + "";
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            int intKey = (int)keyData;
+
+            if(intKey >= 97 && intKey <= 105) // value between 1 and 9
+            {
+                txtResult.Text = txtResult.Text + (intKey - 96).ToString() + "";
+            }
+
+            else if(intKey == 96) // 0
+            {
+                if(txtResult.Text.Contains("0") && txtResult.Text.Length == 1)
+                {
+                    txtResult.Text = "0";
+                }
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
