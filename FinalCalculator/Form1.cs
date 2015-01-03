@@ -15,5 +15,13 @@ namespace FinalCalculator
         {
             InitializeComponent();
         }
+
+        private void Number_Click(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            double input = double.Parse(btn.Text);
+
+            txtResult.Text = txtResult.Text + input + "";
+        }
     }
 }
